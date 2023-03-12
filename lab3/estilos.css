@@ -1,0 +1,114 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+
+header:first-child {
+  background-color: rgb(206, 206, 206, 0.9);
+  display: flex;
+  position: sticky;
+  top: 0;
+  width: 100vw;
+  padding: 10px;
+  z-index: 10;
+}
+
+header > h1 {
+  display: flex;
+  align-items: center;
+}
+
+header > nav {
+  margin: 0px 0px 0px 50px;
+}
+
+header > nav > ul > li {
+  padding: 20px;
+}
+
+.href a:hover{
+  background-color: lightgray;
+  font-weight: bold;
+}
+
+#aMelhorCidade {
+  text-decoration: none;
+  color: blue;
+}
+
+#capitaisEuropeias {
+  text-decoration: none;
+  color: blue;
+}
+
+.viajar {
+  width: 100vw;
+  height: 50vh;
+  background-color: rgba(91, 93, 100, 0.788);
+  justify-content: center;
+  align-items: center;
+  grid-area: viajar;
+}
+
+.viajar > p {
+  font-size: 48px;
+  text-align: center;
+  color: white;
+}
+
+div.imagem {
+  position: relative;
+  display: flex;
+  grid-area: imagem;
+}
+
+div.imagem > p {
+  position: absolute;
+  width: fit-content;
+  padding: 3px 7px;
+  top: 15px;
+  left: 15px;
+  font-size: x-large;
+  background-color: white;
+}
+
+.capitais {
+  margin: auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  background-color: rgb(206, 206, 206);
+  padding: 50px;
+  grid-area: capitais;
+}
+
+.capitais > div {
+  display: flex;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 5px 5px 15px #8888;
+  width: calc(100vw / 5);
+  text-align: center;
+  margin: 20px;
+}
+
+.capitais > div > img {
+  border-radius: 20px 0 0 20px;
+  height: 100%;
+  width: 50%;
+}
+
+.capitais > div > p {
+  margin: auto;
+  font-size: 1.4vw;
+}
+
+.index {
+  justify-content: left;
+}
+
+

@@ -1,0 +1,83 @@
+*{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  color:rgb(50, 15, 204)
+}
+
+.index-h2{
+  color:brown
+}
+
+#files{
+  background-color: rgb(89, 255, 153);
+}
+
+a[target="_blank"] {
+  color: rgb(214, 48, 48);
+} 
+
+h2:hover{
+    background-color: rgb(120, 176, 228);
+}
+
+p::first-letter {
+  font-weight: bold;
+}
+
+div p {
+  background-color: rgb(243, 199, 118);
+}
+
+h2 + h3 + p + p {
+  color :blue
+}
+
+nav {
+  border-left: 10px solid red;
+}
+
+nav a:link {color: blue}
+nav a:visited {color: gray}
+nav a:hover{color: orange}
+nav a:active {color: red}
+
+
+
+/* Configuração dos ícones do menu*/
+nav a:before {
+  font-family: 'FontAwesome';
+  content: "🏡";
+  /* Ícone de casa */
+}
+
+nav a[href='multimedia.html']:before {
+  font-family: 'FontAwesome';
+  content: "📷";
+  /* Ícone de câmera */
+}
+
+nav a[href='local.html']:before {
+  font-family: 'FontAwesome';
+  content: "🗺️";
+  /* Ícone de mapa */
+}
+
+nav a[href='info.html']:before {
+  font-family: 'FontAwesome';
+  content: "📰";
+  /* Ícone de câmera */
+}
+
+nav a[href='quizz.html']:before {
+  font-family: 'FontAwesome';
+  content: "❓";
+  /* Ícone de mapa */
+}
+
+nav a[href='html5-css.html']:before {
+  font-family: 'FontAwesome';
+  content: "📓";
+  /* Ícone de mapa */
+}

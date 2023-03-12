@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang=" pt">
+
+<head>
+    <title>Todo o esplendor de Lisboa!</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Miguel Pinto">
+    <meta name="description" content="Website sobre Lisboa">
+    <meta name="'keywords" content="palavra chave">
+    <link rel="stylesheet" href="estilos.css">
+    <style>
+        body {background-color: rgb(185, 185, 185);}
+        fieldset {background-color: rgb(250, 220, 139);}
+        fieldset[name="info"] {background-color: rgb(206, 159, 71);}
+        fieldset[name="perguntas"] {background-color: rgb(192, 139, 40);}
+    </style>
+</head>
+
+<body>
+    <h3 class="index-h2">Quizz</h3>
+    <p>Olá! <br>
+        Este quizz tem como finalidade descobrir o quanto é que tu sabes sobre Lisboa
+    </p>
+    <form method="POST" action="mailto: seuemail@gmail.com" enctype="multipart/form-data">
+
+        <fieldset>
+            Quizz sobre Lisboa
+            <fieldset name="info">
+                <label>
+                    Nome: <input type="text" id="fname" name="fname" autocomplete="on" size="22" autofocus required>
+                </label>
+                <br><br>
+                <label>
+                    Apelido: <input type="text" id="lname" name="lname" autocomplete="on" required>
+                </label>
+                <br><br>
+                <label>
+                    Email: <input type="text" id="email" name="email" autocomplete="off" size="22" maxlength="35" required>
+                </label>
+            </fieldset>
+            <fieldset name="perguntas">
+                <label for="cityVisited">Em que parte ficou hospedado: </label>
+                <input type="text" pattern="^[a-zA-Z ]*$" title="Letras apenas" id="cityVisited" name="cityVisited" placeholder="Alfama"><br><br>
+
+
+                Voltaria a visitar:<br>
+                <form>
+                    <input type="radio" id="visitAgainS" name="visitAgainS" value="visitAgainS">
+                    <label for="visitAgainS">Sim</label><br>
+                    <input type="radio" id="visitAgainN" name="visitAgainN" value="visitAgainN">
+                    <label for="visitAgainN">Não</label><br><br>
+                </form>
+
+                O que gostou mais da cidade:<br>
+                <form id="checkbox">
+                    <input type="checkbox" id="gastronomia" name="gastronomia" value="gastronomia">
+                    <label for="gastronomia"> Gastronomia</label><br>
+                    <input type="checkbox" id="tempo" name="tempo" value="tempo">
+                    <label for="tempo"> Tempo</label><br>
+                    <input type="checkbox" id="museus" name="museus" value="museus">
+                    <label for="museus"> Museus</label><br><br>
+                </form>
+
+                <form>
+                    <label for="arrive">Em que dia chegou:</label>
+                    <input type="date" id="arrive" name="arrive"><br><br>
+                </form>
+
+                <form action="processar_respostas.php" method="POST">
+                    <h2>Qual é o monumento representado na imagem?</h2>
+                    <img src="images/torre_de_belem.jpg" alt="Torre de Belém">
+                    <br>
+                    <input type="radio" id="a" name="a" value="a">
+                    <label for="a">Torre de Belém</label><br>
+                    <input type="radio" id="b" name="b" value="b">
+                    <label for="visitAgainN">Mosteiro Jerónimos</label><br>
+                    <input type="radio" id="c" name="c" value="c">
+                    <label for="visitAgainN">Castelo São Jorge</label><br><br>
+                </form>
+                
+
+                <form>
+                    <label for="rankColor">No geral como classifica a cidade:<br>
+                        <ul>
+                            <li>Verde: Adorei</li>
+                            <li>Amarelo: Gostei</li>
+                            <li>Vermelho: Não gostei</li>
+                        </ul>
+                    </label>
+                    <input type="color" id="rankColor" name="rankColor"><br><br>
+                </form>
+
+                <form>
+                    <label for="service">Classificação do atendimento nos locais da cidade (entre 1 e 5):</label>
+                    <input type="number" id="service" name="service" min="1" max="5"><br><br>
+                </form>
+
+                <form>
+                    <label for="cleaning">Classificação da limpeza da cidade (entre 0 e 50):</label>
+                    <input type="range" id="cleaning" name="cleaning" min="0" max="50"><br><br>
+                </form>
+
+                <form>
+                    <label for="files">Partilhe connosco as melhores fotografias da cidade:</label>
+                    <input type="file" id="files" name="files" multiple><br><br>
+                </form>
+
+                <form>
+                    <label for="city">Qual cidade gostaria de visitar futuramente:</label>
+                    <select id="city" name="city">
+                        <option value="porto">Porto</option>
+                        <option value="aveiro">Aveiro</option>
+                        <option value="beja">Beja</option>
+                    </select>
+                </form>
+
+                <form>
+                    <br><br>Que comidas gostou mais:
+                    <input list="foods" name="foods">
+                    <datalist id="foods">
+                        <option value="Cozido à Portuguesa">
+                        <option value="Sardinhas assadas">
+                        <option value="Bacalhau com grão">
+                    </datalist>
+                </form>
+
+                <form>
+                    <p><label for="review">Sugestão:</label></p>
+                    <textarea id="review" name="review" rows="4"
+                        cols="50">Adicione aqui alguma sugestão para a cidade.</textarea>
+                </form><br><br>
+
+
+                <input type="submit" value="Submeter" a href="index.html">
+            </fieldset>
+        </fieldset>
+    </form>
+</body>
